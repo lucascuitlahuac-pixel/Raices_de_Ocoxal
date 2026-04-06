@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Raíces de Ocoxal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f4efe6;
+    scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+    background:#5a3e2b;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("https://upload.wikimedia.org/wikipedia/commons/6/6a/Pine_needle_basket.jpg");
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+/* SECCIONES */
+section{
+    padding:60px 30px;
+    max-width:1100px;
+    margin:auto;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+section.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    text-align:center;
+    color:#5a3e2b;
+}
+
+/* CARDS */
+.contenedor{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    width:280px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* GALERÍA */
+.galeria img{
+    width:100%;
+    max-width:300px;
+    margin:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#5a3e2b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#galeria">Galería</a>
+<a href="#historia">Historia</a>
+</nav>
+
+<div class="hero" id="inicio">
+<div>
+<h1>Raíces de Ocoxal 🌿</h1>
+<p>Arte mexicano hecho a mano</p>
+</div>
+</div>
+
+<section id="productos">
+<h2>Artesanías</h2>
+
+<div class="contenedor">
+
+<div class="card">
+<img src="https://enews.mx/foto/noticias/noticias_20230622135829_2389.jpg">
+<p>Canastas tejidas con ocoxal.</p>
+</div>
+
+<div class="card">
+<img src="https://revistazocalo.com/wp-content/uploads/2022/01/oxocas.jpg">
+<p>Tortilleros tradicionales.</p>
+</div>
+
+<div class="card">
+<img src="https://i0.wp.com/agronoticias.com.mx/wp-content/uploads/2020/11/1-17.jpg?fit=500%2C328&ssl=1">
+<p>Decoración artesanal.</p>
+</div>
+
+</div>
+</section>
+
+<section id="galeria">
+<h2>Galería</h2>
+
+<div class="galeria">
+<img src="https://oscarglenn.com/images/assets/news/57512788.jpeg">
+<img src="https://www.milenio.com/uploads/media/2021/09/18/poblanas-transforman-ocoxal-artesanias-andres-5.jpeg">
+<img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2019/04/1804130720.jpg">
+</div>
+
+</section>
+
+<section id="historia">
+<h2>Historia</h2>
+
+<p>
+El ocoxal es la hoja seca del pino utilizada por artesanos mexicanos desde tiempos antiguos,
+principalmente en comunidades rurales del Estado de México como Valle de Bravo, Donato Guerra e Ixtapan del Oro.
+Estas comunidades han aprovechado los recursos naturales de los bosques para desarrollar técnicas artesanales
+que forman parte de su identidad cultural.
+</p>
+
+<p>
+En sus inicios, el ocoxal se utilizaba para encender fuego debido a su fácil combustión. Sin embargo,
+los habitantes comenzaron a notar su resistencia y flexibilidad, lo que permitió desarrollar técnicas de tejido.
+Con el tiempo, estas técnicas evolucionaron hasta convertirse en la elaboración de canastas, tortilleros y objetos decorativos.
+</p>
+
+<p>
+El proceso de elaboración es completamente manual. Primero se recolectan las hojas de pino,
+luego se limpian y se secan. Después, los artesanos seleccionan las mejores fibras y comienzan el tejido
+utilizando herramientas sencillas como agujas e hilos naturales.
+</p>
+
+<p>
+Esta tradición se ha transmitido de generación en generación, lo que ha permitido conservar el conocimiento
+y perfeccionar las técnicas. Cada pieza elaborada es única y refleja el trabajo, la dedicación y la creatividad
+del artesano.
+</p>
+
+<p>
+Hoy en día, las artesanías de ocoxal tienen gran valor cultural y económico. Representan una fuente de ingreso
+para muchas familias y al mismo tiempo ayudan a preservar el medio ambiente, ya que se elaboran con materiales naturales.
+</p>
+
+</section>
+
+<footer>
+<p>© 2026 Raíces de Ocoxal</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+            sec.classList.add("visible");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
